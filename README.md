@@ -48,7 +48,9 @@ hearthstone.getFileInfo("info").then((data) => console.log(data));
   }
 */
 
-hearthstone.getSingleCard("tsla").then((card) => console.log(card[5]));
+hearthstone
+  .getSingleCard("Leeroy Jenkins")
+  .then((card) => console.log(card[5]));
 /*
   {
     name: 'Leeroy Jenkins',
