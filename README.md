@@ -7,7 +7,7 @@ Module to retrieve Hearthstone information about the cards, types etc from [Hear
 
 ## Installation
 
-- Sign up for your own API Key on [Rapid API](https://rapidapi.com/)
+- Sign up for your free API Key on [Rapid API](https://rapidapi.com/)
 - Install hearthstone-card-info library with:
 
 ```bash

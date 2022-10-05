@@ -32,9 +32,6 @@ class HearthstoneInfo {
   async getSingleCard(card: string): Promise<object> {
     try {
       const cardInfo = await this.getFileInfo(`cards/${card}`);
-      // const data = await cardInfo
-      // console.log(data)
-      // return data;
       const cleanData = (cardInfo as Array<any>).map(e => {
         const {name, img, flavor} = e;
         return {
@@ -43,7 +40,6 @@ class HearthstoneInfo {
           flavor
         }
       })
-      // console.log(cleanData)
       return cleanData;
     } catch (err) {
       console.error(err);
@@ -54,7 +50,6 @@ class HearthstoneInfo {
     try {
       const raceInfo = await this.getFileInfo(`cards/races/${race}`);
       const data = await raceInfo
-      // console.log(data)
       return data;
     } catch (err) {
       console.error(err);
@@ -65,7 +60,6 @@ class HearthstoneInfo {
     try {
       const typeInfo = await this.getFileInfo(`cards/types/${type}`);
       const data = await typeInfo
-      // console.log(data)
       return data;
     } catch (err) {
       console.error(err);
@@ -76,7 +70,6 @@ class HearthstoneInfo {
     try {
       const factionInfo = await this.getFileInfo(`cards/factions/${faction}`);
       const data = await factionInfo
-      // console.log(data)
       return data;
     } catch (err) {
       console.error(err);
@@ -84,17 +77,6 @@ class HearthstoneInfo {
   }
 
 }
-
-// const hsinfo = new HearthstoneInfo(myApiKey)
-// hsinfo.getFileInfo("info").then(data => console.log(data))
-// console.log(hsinfo.getFileInfo("info"))
-// hsinfo.getSingleCard("Leeroy Jenkins").then(data => console.log(data[5]))
-// console.log(hsinfo.getRaceCard("Pirate"))
-// hsinfo.getRaceCard("Pirate").then(data => console.log(data[1]))
-// console.log(hsinfo.getTypeCard("Minion"))
-// hsinfo.getTypeCard("Minion").then(data => console.log(data[0]))
-// console.log(hsinfo.getFactionCard("Neutral"))
-// hsinfo.getFactionCard("Neutral").then(data => console.log(data[0]))
 
 module.exports = HearthstoneInfo
 

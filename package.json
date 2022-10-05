@@ -1,6 +1,6 @@
 {
   "name": "hearthstone-card-info",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Module to retrieve current HearthStone game info",
   "main": "src/index.js",
   "directories": {
